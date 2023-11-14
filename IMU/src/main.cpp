@@ -35,20 +35,20 @@ void setup() {
 void loop() {
   // Read sensor data and print it
   
-  sensors_event_t a, g;
-  mpu.getEvent(&a, &g, NULL);
+  sensors_event_t a, g, temp;
+  mpu.getEvent(&a, &g, &temp);
   
   Serial.print("G_x: ");
   Serial.print(g.gyro.x);
   Serial.print("  ");
 
-  // Serial.print("G_y: ");
-  // Serial.print(g.gyro.y);
-  // Serial.print("  ");
+  Serial.print("G_y: ");
+  Serial.print(g.gyro.y);
+  Serial.print("  ");
   
-  // Serial.print("G_z: ");
-  // Serial.print(g.gyro.z);
-  // Serial.print("\n");
+  Serial.print("G_z: ");
+  Serial.print(g.gyro.z);
+  Serial.print("\n");
 
   delay(1500);
 }
