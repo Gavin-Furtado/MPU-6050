@@ -28,6 +28,8 @@ void setup() {
       delay(10);
     }
   }  
+  mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
+  mpu.setGyroRange(MPU6050_RANGE_500_DEG);
 }
 
 void loop() {
@@ -40,13 +42,14 @@ void loop() {
   Serial.print(g.gyro.x);
   Serial.print("  ");
 
-  Serial.print("G_y: ");
-  Serial.print(g.gyro.y);
-  Serial.print("  ");
+  // Serial.print("G_y: ");
+  // Serial.print(g.gyro.y);
+  // Serial.print("  ");
   
-  Serial.print("G_z: ");
-  Serial.print(g.gyro.z);
-  Serial.print("\n");
+  // Serial.print("G_z: ");
+  // Serial.print(g.gyro.z);
+  // Serial.print("\n");
+
   delay(1500);
 }
 
