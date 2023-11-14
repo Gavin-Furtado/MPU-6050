@@ -50,7 +50,7 @@ void loop() {
   Serial.print(g.gyro.z);
   Serial.print("\n");
 
-  delay(1500);
+  delay(1200);
 }
 
 
